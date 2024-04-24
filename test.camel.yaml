@@ -1,0 +1,18 @@
+- route:
+    id: route-85c2
+    nodePrefixId: route-d5a
+    trace: true
+    from:
+      id: from-e094
+      uri: kamelet:mysql-source
+      parameters:
+        databaseName: hrdata
+        password: Shyam1999
+        query: SELECT * FROM hrdata.employees;
+        serverName: localhost
+        serverPort: "3306"
+        username: root
+      steps:
+        - log:
+            id: log-add0
+            message: ${body}
