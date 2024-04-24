@@ -1,0 +1,16 @@
+- route:
+    id: route-8bc8
+    nodePrefixId: route-795
+    from:
+      id: from-3d11
+      uri: kamelet:beer-source
+      steps:
+        - setBody:
+            id: setBody-aef9
+            expression:
+              simple:
+                id: simple-8052
+                expression: ${body}
+        - log:
+            id: log-f5ea
+            message: ${body}
